@@ -1,19 +1,24 @@
 balance = 1000
-choice = input("1.пополнить баланс\n 2. снять деньги\n 3.выйти")
 
-if choice == 1:
-  amount = float(input("сколько внести?"))
-  if amount > 0:
-      balance += amount
-      print(balance)
-   else:
-      print("так нельзя")
-elif choice == "2":
-    amount = float(input("сколько снять?"))
-   if amount > 0:
-       balance -= amount
-       print("balance")
-   else:
-       print("так нельзя")
-elif choice == "3"
-       print("пока")
+while True:
+    choice = input(f"\nБаланс: {balance}\n1. Пополнить баланс\n2. Снять деньги\n3. Выйти\nВыберите: ")
+
+    if choice == "1":
+        amount = float(input("Сколько внести? "))
+        if amount > 0:
+            balance += amount
+            print(balance)
+        else:
+            print("Так нельзя")
+    elif choice == "2":
+        amount = float(input("Сколько снять? "))
+        if 0 < amount <= balance:
+            balance -= amount
+            print(balance)
+        else:
+            print("Так нельзя")
+    elif choice == "3":
+        print("Пока")
+        break
+    else:
+        print("Неверный выбор")
