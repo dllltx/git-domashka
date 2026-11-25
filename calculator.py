@@ -3,9 +3,9 @@ op = input("Действие (+, -, *, /): ")
 b = float(input("Второе число: "))
 
 if op == "+":
-    print(a + b")
+    print(a + b)
 elif op == "-":
-    print("a - b")
+    print(a - b)
 elif op == "*":
     print(a * b)
 elif op == "/":
